@@ -4,32 +4,16 @@ import search from "../assets/search.png";
 import cart from "../assets/cart.png";
 import favourite from "../assets/favourite.png";
 import profile from "../assets/profile.png";
-
-const NAVLINKS = [
-  {
-    label: "HOME",
-    href: "/",
-  },
-  {
-    label: "SHOP",
-    href: "/shop",
-  },
-  {
-    label: "ABOUT",
-    href: "/about",
-  },
-  {
-    label: "CONTACT",
-    href: "/contact_us",
-  },
-];
+import { NAVLINKS } from "./NAVLINKS";
 
 const Header = () => {
   return (
     <nav className={styles.outercontainer}>
       <div className={styles.innerContainer}>
         <div className={styles.logoContainer}>
-          <img src={logo} alt="logo" />
+          <a href="/home">
+            <img src={logo} alt="logo"/>
+          </a>
         </div>
         <div>
           <div className={styles.navlinks}>

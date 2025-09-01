@@ -26,10 +26,13 @@
   gap: 75px;
   width: 48px;
   height: 24px;
-
   font-weight: 500;
   font-size: 16px;
   font-family: "poppins", sans-serif;
+}
+.navlinks a{
+  text-decoration: none;
+  color:black
 }
 
 .icons {
@@ -37,7 +40,6 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
-
   height: 28px;
   width: 28px;
   margin: 0;
