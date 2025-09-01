@@ -1,9 +1,61 @@
 import styles from "./Header.module.css";
+import logo from "../assets/logo.png";
+import search from "../assets/search.png";
+import cart from "../assets/cart.png";
+import favourite from "../assets/favourite.png";
+import profile from "../assets/profile.png";
+
+const NAVLINKS = [
+  {
+    label: "HOME",
+    href: "/",
+  },
+  {
+    label: "SHOP",
+    href: "/shop",
+  },
+  {
+    label: "ABOUT",
+    href: "/about",
+  },
+  {
+    label: "CONTACT",
+    href: "/contact_us",
+  },
+];
 
 const Header = () => {
   return (
-    <nav className={styles.container} style={{ backgroundColor: "black" }}>
-      Header
+    <nav className={styles.outercontainer}>
+      <div className={styles.innerContainer}>
+        <div className={styles.logoContainer}>
+          <img src={logo} alt="logo" />
+        </div>
+        <div>
+          <div className={styles.navlinks}>
+            {NAVLINKS.map((link, index) => (
+              <a key={index} href={link.href} className={styles.navLink}>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        
+        <div className={styles.icons}>
+          <a href="/profile">
+            <img src={profile} alt="Profile" />
+          </a>
+          <a href="/search">
+            <img src={search} alt="Search" />
+          </a>
+          <a href="/favorites">
+            <img src={favourite} alt="Favorites" />
+          </a>
+          <a href="/cart">
+            <img src={cart} alt="Cart" />
+          </a>
+        </div>
+      </div>
     </nav>
   );
 };
