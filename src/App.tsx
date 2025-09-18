@@ -8,6 +8,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const App = () => {
+
+
   return (
     <BrowserRouter>
       <Routes>

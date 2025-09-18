@@ -17,8 +17,6 @@
     
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     
 }
 
@@ -32,8 +30,11 @@
 }
 
 .leftdiv {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 312px;
+    gap: 50px;
 }
 .address{
     font-family: "poppins", sans-serif;
@@ -91,8 +92,13 @@
 }
 .newsletter input{
     border: none;
-    border-bottom: 1px solid black;  
-    
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 5px 0;
+}
+
+.newsletter input:focus {
+    border-bottom: 2px solid black;
 }
 .newsletter button{
     border: none;

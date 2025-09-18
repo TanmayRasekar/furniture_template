@@ -16,7 +16,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={styles.address}>
-                  400 University Drive Suite 200 Coral Gables, FL 33134 USA
+                  <p>400 University Drive Suite 200 Coral<br /> Gables,<br /> FL 33134 USA</p>
                 </div>
               </div>
               <div className={styles.rightdiv}>
