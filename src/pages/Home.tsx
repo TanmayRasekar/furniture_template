@@ -4,6 +4,7 @@ import styles from "./Home.module.css"
 import Bedroom from "../assets/Bedroom.jpg"
 import Livingroom from "../assets/living_room.jpg"
 import Dining from "../assets/dining.jpg"
+import { data } from "../HomeData.tsx/Data"
 
 const Home = () => {
   return (
@@ -51,8 +52,30 @@ const Home = () => {
        </div>
       </div>
       {/* Catogories end */}
-      
-      <div>products</div>
+      {/* products */}
+      <div className={styles.outer_products_container}>
+        <div className={styles.inner_products_container}>
+          <div className={styles.textcontainer}>Our Products</div>
+            <div className={styles.outer_products_card}>
+              {data.map((item, index) => (
+                <div key={index} className={styles.inner_products_card}>
+                  <img src={item.image} alt={item.title} className={styles.products_image} />
+                  <div className={styles.products_bg}>
+                    <div className={styles.products_metadata}>
+                      <div className={styles.products_title}>{item.title}</div>
+                      <div className={styles.products_suffix}>{item.suffix}</div>
+                      <div className={styles.products_price}>{item.price}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={styles.show_more}>
+              <button>Show More</button>
+            </div>
+        </div>
+      </div>
+      {/* products end */}
       <div>showcase1</div>
       <div>showcase2</div>
     </div>
